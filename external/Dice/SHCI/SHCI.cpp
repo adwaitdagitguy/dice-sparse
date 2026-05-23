@@ -92,7 +92,7 @@ void license(char* argv[]) {
   pout << endl;
   pout << "**************************************************************"
        << endl;
-  pout << "Dice  Copyright (C) 2026  Sandeep Sharma" << endl;
+  pout << "Dice  Copyright (C) 2023  Sandeep Sharma" << endl;
   pout << endl;
   pout << "This program is distributed in the hope that it will be useful,"
        << endl;
