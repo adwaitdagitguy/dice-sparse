@@ -1,14 +1,16 @@
 #!/bin/bash
 set -euo pipefail
 
-
+# Start with a fresh external dir
+rm -rf external/ && mkdir external
 
 # Get Boost
 wget https://archives.boost.io/release/1.85.0/source/boost_1_85_0.tar.gz \
     && tar -xzf boost_1_85_0.tar.gz -C $(pwd)/external \
     && rm boost_1_85_0.tar.gz
 
-# Clone Dice default branch (NOT NEEDED, as I am providing the modified DICE)
+# Clone Dice default branch
+git clone https://github.com/adwaitdagitguy/Dice.git $(pwd)/external/Dice
 
 export BOOST_ROOT=$(pwd)/external/boost_1_85_0
 export CURC_HDF5_ROOT=/usr/lib/x86_64-linux-gnu/hdf5/openmpi/
