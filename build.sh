@@ -9,8 +9,7 @@ wget https://archives.boost.io/release/1.85.0/source/boost_1_85_0.tar.gz \
     && tar -xzf boost_1_85_0.tar.gz -C $(pwd)/external \
     && rm boost_1_85_0.tar.gz
 
-# Clone Dice default branch
-git clone https://github.com/caleb-johnson/Dice.git $(pwd)/external/Dice
+# Clone Dice default branch (NOT NEEDED, as I am providing the modified DICE)
 
 export BOOST_ROOT=$(pwd)/external/boost_1_85_0
 export CURC_HDF5_ROOT=/usr/lib/x86_64-linux-gnu/hdf5/openmpi/
