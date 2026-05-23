@@ -1,8 +1,7 @@
 #!/bin/bash
 set -euo pipefail
 
-# Start with a fresh external dir
-rm -rf external/ && mkdir external
+
 
 # Get Boost
 wget https://archives.boost.io/release/1.85.0/source/boost_1_85_0.tar.gz \
