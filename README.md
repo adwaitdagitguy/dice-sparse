@@ -28,6 +28,7 @@ To install the modified dice (recommended method):
 3) ./build.sh
 4) pip install -e . 
 5) Copy qiskit_addon_dice_solver in the directory in which you run your workflows or copy the absolute directory path where you installed
+6) Replace SCIState class with SparseSCIState where applicable 
 
 ### About
 
