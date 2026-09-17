@@ -1,7 +1,7 @@
 # Qiskit addon: Dice eigensolver
 
 ### Table of Contents
-
+* [Modified Dice](#NOTE)
 * [About](#about)
 * [Documentation](#documentation)
 * [Supported Platforms](#supported-platforms)
@@ -14,6 +14,21 @@
 
 ----------------------------------------------------------------------------------------------------
 
+### NOTE
+
+NOTE:
+This is a modified qiskit addon dice-solver with notably 3 changes:
+SHCI.cpp in the original dice software: Eliminates dense representation
+Lib.rs: Eliminates full CI vector reconstruction from the diagonalized information
+Addition of a sparse SCI State: 
+To install the modified dice (recommended method):
+
+1) git clone https://github.com/adwaitdagitguy/dice-sparse.git
+2) cd dice-sparse (ensure your env has all dependencies) 
+3) ./build.sh
+4) pip install -e . 
+5) Copy qiskit_addon_dice_solver in the directory in which you run your workflows or copy the absolute directory path where you installed
+
 ### About
 
 [Qiskit addons](https://quantum.cloud.ibm.com/docs/guides/addons) are a collection of modular tools for building utility-scale workloads powered by Qiskit.
@@ -23,6 +38,10 @@ This package contains a [Dice-based eigensolver [1-2]](https://sanshar.github.io
 This package uses the ``Dice`` command line application to perform the Davidson diagonalization method, which allows for diagonalization of systems of 30+ orbitals. The ``Dice`` application is designed to perform semistochastic heat-bath configuration interaction (SHCI) calculations that involves more than a single run of Davidson's method; however, this package restricts the inputs to ``Dice`` such that it is used only to perform a single diagonalization routine in the subspace defined by the input determinants.
 
 We acknowledge Sandeep Sharma's support, suggestions, and conversations that made this package possible.
+
+
+
+
 
 ----------------------------------------------------------------------------------------------------
 
